@@ -23,6 +23,9 @@ public class SetTest {
         secondSet.add("Kraków");
         System.out.println(secondSet);
 
+        secondSet.remove("Kraków");
+        System.out.println(secondSet);
+
 
 
     }

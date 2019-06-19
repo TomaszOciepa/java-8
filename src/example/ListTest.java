@@ -34,6 +34,13 @@ public class ListTest {
         System.out.println(bothList.indexOf("Tomek"));
         System.out.println(bothList.lastIndexOf("Tomek"));
 
+        bothList.remove("Tomek");
+
+        System.out.println(bothList);
+
+        bothList.remove("Tomek");
+        System.out.println(bothList);
+
     }
 
 }

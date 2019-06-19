@@ -1,4 +1,4 @@
-package example;
+package colletions;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -25,6 +25,12 @@ public class SetTest {
 
         secondSet.remove("Kraków");
         System.out.println(secondSet);
+
+
+        System.out.println("Iterowanie po set foreach");
+        for (String item : mySet){
+            System.out.println(item);
+        }
 
 
 

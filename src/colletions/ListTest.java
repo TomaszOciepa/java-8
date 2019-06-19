@@ -1,4 +1,4 @@
-package example;
+package colletions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,6 +41,17 @@ public class ListTest {
         bothList.remove("Tomek");
         System.out.println(bothList);
 
+        System.out.println("Iterowanie po liście foreach");
+        for (String item : bothList){
+            System.out.println(item);
+        }
+
+        System.out.println("Iterowanie po liście for");
+        for (int i = 0; i < bothList.size(); i++) {
+
+            System.out.println(bothList.get(i));
+
+        }
     }
 
 }

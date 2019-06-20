@@ -52,5 +52,15 @@ public class MapTest {
             System.out.println(key+" : "+value);
         }
 
+        System.out.println("0.3 == 0.1 + 0.2: " + (0.3 == 0.1 + 0.2)); // !!!
+        System.out.println("0.3 == 0.1 + 0.2: " + (Math.abs(0.3 - (0.1 + 0.2)) < 0.000001));
+
+        System.out.println("test == test: " + (new String("test") == new String("test")));
+        System.out.println("test equals test: " + new String("test").equals(new String("test")));
+
+        String reference1 = new String("something");
+        String reference2 = reference1;
+        System.out.println("reference1 == reference2: " + (reference1 == reference2));
+
     }
 }

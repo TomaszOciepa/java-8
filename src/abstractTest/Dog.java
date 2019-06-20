@@ -1,5 +1,6 @@
 package abstractTest;
 
+
 public abstract class Dog extends Animal {
 
     @Override
@@ -11,4 +12,5 @@ public abstract class Dog extends Animal {
     public void noise() {
         System.out.println("hau hau hau");
     }
+
 }

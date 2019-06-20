@@ -2,7 +2,9 @@ package interfaceTest;
 
 public interface Vehicel {
 
-    void numberWheels();
+    default void numberWheels(){
+        System.out.println("Ilość kół: 4");
+    }
 
     void typeOfDrive();
 

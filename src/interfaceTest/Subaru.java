@@ -6,14 +6,12 @@ public class Subaru implements Car {
     String mark;
     String color;
     Float engineCm3;
-    int numberWheels;
     String typeOfDrive;
 
-    public Subaru(String mark, String color, Float engineCm3, int numberWheels, String typeOfDrive) {
+    public Subaru(String mark, String color, Float engineCm3,  String typeOfDrive) {
         this.mark = mark;
         this.color = color;
         this.engineCm3 = engineCm3;
-        this.numberWheels = numberWheels;
         this.typeOfDrive = typeOfDrive;
     }
 
@@ -32,10 +30,6 @@ public class Subaru implements Car {
         System.out.println("Pojemność silnika: "+engineCm3);
     }
 
-    @Override
-    public void numberWheels() {
-        System.out.println("Liczba kół: "+ numberWheels);
-    }
 
     @Override
     public void typeOfDrive() {
@@ -48,7 +42,7 @@ public class Subaru implements Car {
                 "mark='" + mark + '\'' +
                 ", color='" + color + '\'' +
                 ", engineCm3=" + engineCm3 +
-                ", numberWheels=" + numberWheels +
+                ", engineCm3=" + engineCm3 +
                 ", typeOfDrive='" + typeOfDrive + '\'' +
                 '}';
     }

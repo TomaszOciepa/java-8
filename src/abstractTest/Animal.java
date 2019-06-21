@@ -1,4 +1,5 @@
 package abstractTest;
+;
 
 public abstract class Animal {
 
@@ -6,5 +7,7 @@ public abstract class Animal {
 
     public abstract void eat();
 
-    public abstract void sleept();
+    public  void sleept(){
+        System.out.println("zzzzzzzzzzz");
+    }
 }

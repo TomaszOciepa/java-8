@@ -1,6 +1,7 @@
 package interfaceTest;
 
-public interface Car extends Vehicel {
+
+public interface Car extends Vehicel, SuperCar {
 
 
     void mark();

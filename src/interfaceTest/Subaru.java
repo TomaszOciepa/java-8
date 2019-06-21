@@ -1,6 +1,7 @@
 package interfaceTest;
 
-public class Subaru implements Car {
+
+public class Subaru implements Car, SuperCar {
 
 
     String mark;
@@ -45,5 +46,10 @@ public class Subaru implements Car {
                 ", engineCm3=" + engineCm3 +
                 ", typeOfDrive='" + typeOfDrive + '\'' +
                 '}';
+    }
+
+    @Override
+    public void goldWheels() {
+        System.out.println("I have gold Wheels :) wrm wrm wrm!!");
     }
 }

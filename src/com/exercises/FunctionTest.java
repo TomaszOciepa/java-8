@@ -20,6 +20,8 @@ public class FunctionTest {
          return result;
         };
 
+
+
         List<Integer> integerList = f.apply(list);
 
         System.out.println(integerList);

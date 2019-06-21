@@ -8,10 +8,6 @@ public class Husky extends Dog {
         this.name = name;
     }
 
-    @Override
-    public void sleept() {
-        System.out.println("zzzzzzZZZ");
-    }
 
     public String getName() {
         return name;

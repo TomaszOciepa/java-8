@@ -12,7 +12,13 @@ public class MathTest {
 
         getResult(list -> Collections.max(list), parameter -> System.out.println("Wynik: "+ parameter));
 
-        
+        getResult(list -> {
+            int sum = 0;
+            for (Integer i : list) {
+                sum = i;
+            }
+            return sum;
+        }, System.out::println);
     }
 
     public static void getResult(Function<List<Integer>, Integer> o, Consumer<Integer> c){

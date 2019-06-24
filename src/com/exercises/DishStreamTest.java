@@ -26,6 +26,11 @@ public class DishStreamTest {
         System.out.println("-------------------");
         getNames(dishes).forEach(System.out::println);
 
+        System.out.println("-------------------");
+
+        System.out.println(sumCalories(dishes));
+
+
     }
 
     private static List<Dish> sortByCalories(List<Dish> dishes){
@@ -34,5 +39,11 @@ public class DishStreamTest {
 
     private static List<String> getNames(List<Dish> dishes){
         return dishes.stream().map(Dish::getName).collect(Collectors.toList());
+    }
+
+    private static Integer sumCalories(List<Dish> dishes){
+
+        return dishes.stream().map(dish -> dish.getCalories()).reduce(0, (sum, cal) -> sum + cal);
+        
     }
 }

@@ -43,7 +43,8 @@ public class DishStreamTest {
 
     private static Integer sumCalories(List<Dish> dishes){
 
-        return dishes.stream().map(dish -> dish.getCalories()).reduce(0, (sum, cal) -> sum + cal);
-        
+        //return dishes.stream().map(dish -> dish.getCalories()).reduce(0, (sum, cal) -> sum + cal);
+
+        return dishes.stream().mapToInt(Dish::getCalories).sum();
     }
 }

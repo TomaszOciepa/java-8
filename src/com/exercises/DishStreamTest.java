@@ -22,10 +22,17 @@ public class DishStreamTest {
         //System.out.println(dishes.stream().sorted((d1, d2 )-> d2.getCalories() - d1.getCalories()).collect(Collectors.toList()));
 
         sortByCalories(dishes).forEach(System.out::println);
-        
+
+        System.out.println("-------------------");
+        getNames(dishes).forEach(System.out::println);
+
     }
 
     private static List<Dish> sortByCalories(List<Dish> dishes){
         return dishes.stream().sorted((d1, d2 )-> d1.getCalories() - d2.getCalories()).collect(Collectors.toList());
+    }
+
+    private static List<String> getNames(List<Dish> dishes){
+        return dishes.stream().map(Dish::getName).collect(Collectors.toList());
     }
 }

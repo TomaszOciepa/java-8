@@ -7,5 +7,8 @@ public class OverrideTest {
         bmw.startEngine();
         bmw.fuelType();
 
+        Car.smoething();
+
+        System.out.println(Car.mark);
     }
 }

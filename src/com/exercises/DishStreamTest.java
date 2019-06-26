@@ -38,6 +38,10 @@ public class DishStreamTest {
 
         sortByCaloriesLimit(4, dishes).forEach(System.out::println);
 
+        System.out.println("-------------------");
+
+        getCloriesBigestThan500(dishes).forEach(System.out::println);
+
     }
 
     private static List<Dish> sortByCalories(List<Dish> dishes){
@@ -61,5 +65,9 @@ public class DishStreamTest {
 
     private static List<Dish> sortByCaloriesLimit(int limit, List<Dish> dishList){
         return dishList.stream().sorted((d1, d2) -> d2.getCalories() - d1.getCalories()).limit(limit).collect(Collectors.toList());
+    }
+
+    private static List<Dish> getCloriesBigestThan500(List<Dish> dishList){
+        return dishList.stream().filter(dish -> dish.getCalories() > 500).sorted((d1,d2)->d2.getCalories() - d1.getCalories()).collect(Collectors.toList());
     }
 }

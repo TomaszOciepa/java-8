@@ -36,7 +36,7 @@ public class DishStreamTest {
 
         System.out.println("-------------------");
 
-        sortByCaloriesLimit3(dishes).forEach(System.out::println);
+        sortByCaloriesLimit(4, dishes).forEach(System.out::println);
 
     }
 
@@ -59,7 +59,7 @@ public class DishStreamTest {
         return dishList.stream().filter(dish -> dish.vegetarian == true).collect(Collectors.toList());
     }
 
-    private static List<Dish> sortByCaloriesLimit3(List<Dish> dishList){
-        return dishList.stream().sorted((d1, d2) -> d2.getCalories() - d1.getCalories()).limit(3).collect(Collectors.toList());
+    private static List<Dish> sortByCaloriesLimit(int limit, List<Dish> dishList){
+        return dishList.stream().sorted((d1, d2) -> d2.getCalories() - d1.getCalories()).limit(limit).collect(Collectors.toList());
     }
 }

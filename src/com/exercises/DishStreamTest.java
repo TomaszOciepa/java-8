@@ -30,6 +30,10 @@ public class DishStreamTest {
 
         System.out.println(sumCalories(dishes));
 
+        System.out.println("-------------------");
+        
+        onlyVegetarianDishes(dishes).forEach(System.out::println);
+
 
     }
 
@@ -46,5 +50,9 @@ public class DishStreamTest {
         //return dishes.stream().map(dish -> dish.getCalories()).reduce(0, (sum, cal) -> sum + cal);
 
         return dishes.stream().mapToInt(Dish::getCalories).sum();
+    }
+
+    private static List<Dish> onlyVegetarianDishes(List<Dish> dishList){
+        return dishList.stream().filter(dish -> dish.vegetarian == true).collect(Collectors.toList());
     }
 }

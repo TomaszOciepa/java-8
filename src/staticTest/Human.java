@@ -16,9 +16,10 @@ public class Human {
         this.age = age;
     }
 
+
     public static void showNationality(){
         System.out.println(nacionality);
-        
+
     }
 
 

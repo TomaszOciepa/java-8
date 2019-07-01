@@ -30,6 +30,6 @@ public class LetterCounter {
         int result = r.apply(letters);
         System.out.println(result);
 
-        
+
     }
 }

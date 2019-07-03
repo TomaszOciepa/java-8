@@ -1,8 +1,6 @@
 package com.exercises;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.time.*;
 import java.time.temporal.ChronoField;
 
 public class DataTimeTest {
@@ -21,15 +19,32 @@ public class DataTimeTest {
 //        System.out.println(lt2.getNano());
 //        System.out.println(lt2.get(ChronoField.MILLI_OF_SECOND));
 
-        LocalDateTime ldt = LocalDateTime.of(2019, 07, 03, 17, 35);
+//        LocalDateTime ldt = LocalDateTime.of(2019, 07, 03, 17, 35);
+//
+//        System.out.println(ldt);
+//
+//        LocalTime lt = ldt.toLocalTime();
+//        System.out.println(lt);
+//
+//        LocalDate ld = ldt.toLocalDate();
+//        System.out.println(ld);
 
+        ZoneId zoneId = ZoneId.systemDefault();
+
+        System.out.println("Defoult zone "+zoneId);
+
+        ZoneId zoneId1 = ZoneId.of("Australia/Sydney");
+
+        LocalDateTime ldt = LocalDateTime.now();
         System.out.println(ldt);
 
-        LocalTime lt = ldt.toLocalTime();
-        System.out.println(lt);
+        ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId1);
 
-        LocalDate ld = ldt.toLocalDate();
-        System.out.println(ld);
-        
+        System.out.println(zdt);
+
+        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+
+        System.out.println(zonedDateTime);
+
     }
 }

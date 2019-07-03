@@ -2,6 +2,7 @@ package com.exercises;
 
 import java.time.*;
 import java.time.temporal.ChronoField;
+import java.time.temporal.ChronoUnit;
 
 public class DataTimeTest {
     public static void main(String[] args) {
@@ -29,22 +30,34 @@ public class DataTimeTest {
 //        LocalDate ld = ldt.toLocalDate();
 //        System.out.println(ld);
 
-        ZoneId zoneId = ZoneId.systemDefault();
+//        ZoneId zoneId = ZoneId.systemDefault();
+//
+//        System.out.println("Defoult zone "+zoneId);
+//
+//        ZoneId zoneId1 = ZoneId.of("Australia/Sydney");
+//
+//        LocalDateTime ldt = LocalDateTime.now();
+//        System.out.println(ldt);
+//
+//        ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId1);
+//
+//        System.out.println(zdt);
+//
+//        ZonedDateTime zonedDateTime = ZonedDateTime.now();
+//
+//        System.out.println(zonedDateTime);
 
-        System.out.println("Defoult zone "+zoneId);
+        LocalTime now = LocalTime.now();
+        System.out.println(now);
 
-        ZoneId zoneId1 = ZoneId.of("Australia/Sydney");
+        Duration duration = Duration.of(10, ChronoUnit.MINUTES);
 
-        LocalDateTime ldt = LocalDateTime.now();
-        System.out.println(ldt);
+        System.out.println(now.plus(duration));
 
-        ZonedDateTime zdt = ZonedDateTime.of(ldt, zoneId1);
+        LocalTime lt = LocalTime.of(8, 0);
 
-        System.out.println(zdt);
+        System.out.println(Duration.between(now, lt));
 
-        ZonedDateTime zonedDateTime = ZonedDateTime.now();
-
-        System.out.println(zonedDateTime);
 
     }
 }

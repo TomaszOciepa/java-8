@@ -3,6 +3,7 @@ package com.exercises;
 import java.time.*;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
+import java.util.Random;
 
 public class DataTimeTest {
     public static void main(String[] args) {
@@ -47,17 +48,25 @@ public class DataTimeTest {
 //
 //        System.out.println(zonedDateTime);
 
-        LocalTime now = LocalTime.now();
-        System.out.println(now);
+//        LocalTime now = LocalTime.now();
+//        System.out.println(now);
+//
+//        Duration duration = Duration.of(10, ChronoUnit.MINUTES);
+//
+//        System.out.println(now.plus(duration));
+//
+//        LocalTime lt = LocalTime.of(8, 0);
+//
+//        System.out.println(Duration.between(now, lt));
 
-        Duration duration = Duration.of(10, ChronoUnit.MINUTES);
+        LocalTime start = LocalTime.now();
+        for (int i = 0; i < 1000; i++) {
+            System.out.println(new Random().nextInt());
+        }
 
-        System.out.println(now.plus(duration));
+        LocalTime stop = LocalTime.now();
 
-        LocalTime lt = LocalTime.of(8, 0);
-
-        System.out.println(Duration.between(now, lt));
-
+        System.out.println(Duration.between(start, stop));
 
     }
 }
